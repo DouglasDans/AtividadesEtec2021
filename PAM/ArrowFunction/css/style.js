@@ -9,5 +9,12 @@ export default StyleSheet.create({
         padding:'5%',
         backgroundColor: 'gainsboro',
       },
-
+      div2:{
+        backgroundColor: '#232b36',
+        padding: '5%',
+        paddingBottom: '0%'
+      },
+      input: {
+        color: '#555'
+      },
 })

@@ -5,7 +5,8 @@ import {
   Text,
   TextInput,
   Button,
-  Alert
+  Alert,
+  Image
 
 } from 'react-native'
 
@@ -19,10 +20,11 @@ export default function Aplication(){
     const [mensagem,setMsg] = useState()
 
     const exibirDados = () => {
-      Alert.alert("o Nome digitado foi:",nome)
-      Alert.alert("o Email digitado foi:",email)
-      Alert.alert("o Assunto digitado foi:",assunto)
       Alert.alert("Essa é a mensagem:",mensagem)
+      Alert.alert("o Assunto digitado foi:",assunto)
+      Alert.alert("o Email digitado foi:",email)
+      Alert.alert("o Nome digitado foi:",nome)
+      
     }
 
 
@@ -30,12 +32,18 @@ export default function Aplication(){
     return(
       
       <View style={estilo.container}>
+        <View style={estilo.div2}>
+        <Image source={require('./img/Paralax.png')} style={{width: '100%',
+        height: '40%',
+        resizeMode:'center'}} />
+        </View>
         <View style={estilo.div1}>
 
           <View>
             <Text>Nome:</Text>
             <TextInput placeholder="Insira seu nome aqui" 
             autoFocus={true}
+            style={estilo.input}
             placeholderTextColor='#555'
             onChangeText={text=>setNome(text)}
             keyboardType={"default"}/>
@@ -45,6 +53,7 @@ export default function Aplication(){
             <Text>Email:</Text>
             <TextInput placeholder="Insira seu email aqui" 
             placeholderTextColor='#555'
+            style={estilo.input}
             onChangeText={text=>setEmail(text)}
             keyboardType={'email-address'}/>
           </View>
@@ -53,6 +62,7 @@ export default function Aplication(){
             <Text>Assunto:</Text>
               <TextInput placeholder="Insira seu assunto aqui" 
               placeholderTextColor='#555'
+              style={estilo.input}
               onChangeText={text=>setAssunto(text)}
               keyboardType={"default"}/>
           </View>
@@ -61,6 +71,7 @@ export default function Aplication(){
             <Text>Mensagem:</Text>
             <TextInput placeholder="Insira sua mensagem aqui" 
             placeholderTextColor='#555'
+            style={estilo.input}
             onChangeText={text=>setMsg(text)}
             keyboardType={"default"}/>
           </View>
