@@ -27,7 +27,7 @@ export default function Aplication(){
             <Text>Email:</Text>
             <TextInput placeholder="Insira seu email aqui" 
             style={estilo.input}
-            keyboardType={'email'}/>
+            keyboardType={'email-address'}/>
           </View>
 
           <View>
@@ -43,15 +43,12 @@ export default function Aplication(){
             style={estilo.input}
             keyboardType={"default"}/>
           </View>
+
           <View>
             <Button title="Enviar"
-              onPress={()=>Alert.Alert('hello word',"minha pica")}
-            
+              onPress={()=>Alert.alert('hello word',"minha pica")}
             />
           </View>
-          
-          
-
           
         </View>
       </View>

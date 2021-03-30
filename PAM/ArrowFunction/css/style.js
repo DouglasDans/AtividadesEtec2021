@@ -9,7 +9,5 @@ export default StyleSheet.create({
         padding:'5%',
         backgroundColor: 'gainsboro',
       },
-      input: {
-        border: '1px solid'
-      }
+
 })
